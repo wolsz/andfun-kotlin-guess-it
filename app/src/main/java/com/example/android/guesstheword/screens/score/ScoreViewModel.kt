@@ -16,7 +16,15 @@
 
 package com.example.android.guesstheword.screens.score
 
+import android.util.Log
+import androidx.lifecycle.ViewModel
+
 // TODO (01) Create the ScoreViewModel class and have it take in an integer constructor parameter
+class ScoreViewModel(finalScore: Int) : ViewModel() {
+    init {
+        Log.i("ScoreViewModel", "Final score is $finalScore")
+    }
+}
 // called finalScore
 // TODO (06) Add a LiveData for the score and the play again event, using the best practices for
 // encapsulation and event handling that you've learned

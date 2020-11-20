@@ -32,6 +32,9 @@ import com.example.android.guesstheword.databinding.ScoreFragmentBinding
  */
 class ScoreFragment : Fragment() {
 
+    private lateinit var viewModel: ScoreViewModel
+    private lateinit var viewModelFactory: ScoreViewModelFactory
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -46,6 +49,7 @@ class ScoreFragment : Fragment() {
                 false
         )
 
+        viewModelFactory = ScoreViewModelFactory()
         // TODO (04) Create and construct a ScoreViewModelFactory
         // TODO (05) Create ScoreViewModel by using ViewModelProvider as usual, except also
         // pass in your ScoreViewModelFactory
